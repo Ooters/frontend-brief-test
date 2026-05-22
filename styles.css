@@ -4,20 +4,20 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* palette — sampled from the reference, lightly refined */
-  --sage:        #9aa893;
-  --sage-deep:   #6b7a63;
-  --sage-dark:   #4f5b48;
-  --beige:       #d9d3b8;
-  --beige-warm:  #cfc8a9;
-  --cream:       #efe9cf;
-  --cream-hi:    #f6f1d9;
-  --ink:         #222222;
-  --ink-soft:    #3a3a30;
-  --brown:       #5a4a2a;
-  --blue:        #2a4d8f;
-  --blue-hot:    #c8362a;
-  --rule:        #6b7a6355;
+  /* palette — dusty plum + cool mint (6c464f / 9e768f / 04151f / c2d3cd / afbfc0) */
+  --sage:        #afbfc0;  /* outer chrome — was sage */
+  --sage-deep:   #9e768f;  /* accent / title bar top — was sage-deep */
+  --sage-dark:   #6c464f;  /* dark borders / title bar bottom — was sage-dark */
+  --beige:       #c2d3cd;  /* panel background — was beige */
+  --beige-warm:  #a8bcb5;  /* secondary panel bg — derived darker mint */
+  --cream:       #e3eae6;  /* inner content / inputs — derived pale mint */
+  --cream-hi:    #eef2ef;  /* highlighted inputs — derived paler mint */
+  --ink:         #04151f;  /* body text */
+  --ink-soft:    #2a3b45;  /* secondary text — derived navy-grey */
+  --brown:       #9e768f;  /* visited links — dusty rose */
+  --blue:        #6c464f;  /* unvisited links — deep plum */
+  --blue-hot:    #b8556c;  /* hover — warm rose, derived */
+  --rule:        #6c464f55;
 }
 
 /* ─────────────────  reset & base  ───────────────── */
@@ -31,9 +31,9 @@ body {
   color: var(--ink);
   background:
     /* faint paper grain */
-    radial-gradient(circle at 20% 10%, #00000005 0 1px, transparent 2px),
-    radial-gradient(circle at 80% 60%, #00000005 0 1px, transparent 2px),
-    repeating-linear-gradient(0deg, #8e9c87 0 2px, #95a38e 2px 4px);
+    radial-gradient(circle at 20% 10%, #00000008 0 1px, transparent 2px),
+    radial-gradient(circle at 80% 60%, #00000008 0 1px, transparent 2px),
+    repeating-linear-gradient(0deg, #a4b4b5 0 2px, #afbfc0 2px 4px);
   min-height: 100vh;
   padding: 14px 8px 28px;
 }
@@ -43,7 +43,7 @@ a {
   text-decoration: underline;
 }
 a:visited { color: var(--brown); }
-a:hover   { color: var(--blue-hot); text-decoration: none; background: #fff5b0; }
+a:hover   { color: var(--blue-hot); text-decoration: none; background: var(--cream-hi); }
 a:focus-visible { outline: 1px dotted var(--ink); outline-offset: 1px; }
 
 h1, h2, h3, h4, p, ul, ol, dl, dd, dt, blockquote, figure { margin: 0; padding: 0; }
@@ -96,7 +96,7 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   border: 1px solid var(--sage-dark);
   height: 124px;
   overflow: hidden;
-  background: var(--sage);
+  background: var(--sage-deep);
   display: flex;
   align-items: center;
   padding: 0 18px;
@@ -105,12 +105,12 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   position: absolute; inset: 0;
   background:
     /* slanted blade highlights, like the deviantart cog banner */
-    linear-gradient(100deg, transparent 0 40%, #ffffff10 40% 45%, transparent 45% 60%, #00000010 60% 65%, transparent 65%),
+    linear-gradient(100deg, transparent 0 40%, #ffffff14 40% 45%, transparent 45% 60%, #00000018 60% 65%, transparent 65%),
     repeating-linear-gradient(135deg,
-      #9aa893 0 14px,
-      #93a18b 14px 16px,
-      #9aa893 16px 30px,
-      #a3b09b 30px 32px);
+      #9e768f 0 14px,
+      #8a6478 14px 16px,
+      #9e768f 16px 30px,
+      #ad8a9f 30px 32px);
   opacity: 0.95;
 }
 .logo-plaque {
@@ -261,20 +261,20 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   box-shadow: inset 0 0 0 1px var(--cream);
 }
 .panel-bar {
-  background: linear-gradient(180deg, #7a8a72 0%, var(--sage-deep) 100%);
-  color: var(--cream);
+  background: linear-gradient(180deg, var(--sage-deep) 0%, var(--sage-dark) 100%);
+  color: var(--cream-hi);
   font: bold 11px/1.5 Verdana, sans-serif;
   letter-spacing: 0.03em;
   padding: 4px 8px;
-  border-bottom: 1px dotted var(--sage-dark);
-  text-shadow: 1px 1px 0 #00000044;
+  border-bottom: 1px dotted var(--ink);
+  text-shadow: 1px 1px 0 #00000066;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 8px;
 }
 .panel-bar.lit {
-  background: linear-gradient(180deg, #b08e3c 0%, #8a6d2a 100%);
+  background: linear-gradient(180deg, #b8869f 0%, #6c464f 100%);
 }
 .panel-bar-aside {
   font-weight: normal;
@@ -325,7 +325,7 @@ code, kbd, samp { font-family: "Courier New", monospace; }
 .count-cell {
   display: inline-block;
   background: var(--ink);
-  color: #b9d77a;
+  color: var(--beige);
   padding: 0 2px;
   margin: 0 1px;
   font-weight: bold;
@@ -347,8 +347,8 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 4px;
-  color: #b9d77a;
-  background: #1a1a14;
+  color: var(--beige);
+  background: var(--ink);
   border: 1px solid var(--sage-dark);
   box-shadow:
     inset 1px 1px 0 #00000088,
@@ -423,9 +423,9 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   margin-bottom: 4px;
   border: 1px solid var(--sage-dark);
 }
-.status-shipped   { background: #6c8a52; color: var(--cream); }
-.status-brewing   { background: #c79a3e; color: var(--ink); }
-.status-abandoned { background: #8a4a3a; color: var(--cream); }
+.status-shipped   { background: var(--sage-dark);  color: var(--beige); }
+.status-brewing   { background: var(--sage-deep);  color: var(--ink); }
+.status-abandoned { background: var(--ink);        color: var(--sage); }
 .project-grid .entry-title { display: block; }
 .project-grid p { margin-top: 3px; }
 
@@ -592,14 +592,14 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   font: bold 10px/1.4 "Courier New", monospace;
   background: repeating-linear-gradient(
     -45deg,
-    #1a1a14 0 6px,
-    #d4a72e 6px 12px
+    var(--ink) 0 6px,
+    var(--sage-deep) 6px 12px
   );
-  color: #fff;
+  color: var(--cream-hi);
   text-shadow: 1px 1px 0 #000;
   padding: 4px 12px;
   letter-spacing: 0.05em;
-  border: 1px solid #1a1a14;
+  border: 1px solid var(--ink);
   animation: tilt 6s ease-in-out infinite;
   transform-origin: center;
 }
