@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   kindling.net — a personal homepage, kept by hand
+   Ooters.net — just a lil place
    tasteful early-2000s. handmade but well made.
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -94,7 +94,7 @@ code, kbd, samp { font-family: "Courier New", monospace; }
 .banner {
   position: relative;
   border: 1px solid var(--sage-dark);
-  height: 104px;
+  height: 124px;
   overflow: hidden;
   background: var(--sage);
   display: flex;
@@ -119,19 +119,35 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   background: var(--cream);
   border: 1px solid var(--sage-dark);
   box-shadow: 2px 2px 0 #0002, inset 0 0 0 1px var(--beige-warm);
-  padding: 8px 16px 6px;
+  padding: 8px 16px 8px 8px;
   display: inline-flex;
-  align-items: baseline;
-  gap: 8px;
+  align-items: center;
+  gap: 12px;
   transform: skewX(-2deg);
 }
 .logo-plaque > * { transform: skewX(2deg); }
-.logo-mark { align-self: center; line-height: 0; }
-.logo-mark svg { display: block; filter: drop-shadow(1px 1px 0 #00000022); }
+
+.logo-mark {
+  line-height: 0;
+  background: #fff;
+  border: 1px solid var(--sage-dark);
+  box-shadow: inset 0 0 0 2px var(--cream), 1px 1px 0 #00000022;
+  padding: 2px;
+}
+.logo-mark img {
+  display: block;
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  filter: contrast(1.02) saturate(0.95);
+}
+
+.logo-text { display: flex; flex-direction: column; gap: 2px; }
 
 .logo-word {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 30px;
+  font-size: 32px;
+  line-height: 1;
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -144,16 +160,16 @@ code, kbd, samp { font-family: "Courier New", monospace; }
 .logo-tld {
   color: var(--brown);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: -0.04em;
   margin-left: 1px;
 }
 .logo-tag {
-  font-size: 10px;
+  font-size: 11px;
   font-style: italic;
   color: var(--ink-soft);
-  margin-left: 6px;
   letter-spacing: 0.02em;
+  margin-top: 2px;
 }
 
 .banner-meta {
@@ -601,6 +617,9 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   .banner-meta { position: static; margin-top: 8px; }
   .logo-plaque { transform: none; }
   .logo-plaque > * { transform: none; }
+  .logo-mark img { width: 64px; height: 64px; }
+  .logo-word { font-size: 26px; }
+  .logo-tld { font-size: 18px; }
   .login-bar { font-size: 11px; }
   .login-note { margin-left: 0; width: 100%; }
   .project-grid { grid-template-columns: 1fr; }

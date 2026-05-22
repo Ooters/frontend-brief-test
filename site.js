@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────
-   kindling.net — a teaspoon of javascript
+   Ooters.net — a teaspoon of javascript
    ────────────────────────────────────────────────────────────────── */
 
 (function () {
@@ -16,7 +16,7 @@
   // ── visitor counter via localStorage ─────────────────────────────
   // not a real counter. it's your counter, on your machine.
   // that's more honest than most.
-  var KEY = 'kindling.visits';
+  var KEY = 'ooters.visits';
   var visits;
   try {
     visits = parseInt(localStorage.getItem(KEY) || '0', 10);

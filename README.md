@@ -1,6 +1,6 @@
-# kindling.net
+# Ooters.net
 
-A small personal homepage, kept by hand. Tasteful early-2000s — handmade but well made.
+Just a lil place. A personal homepage, kept by hand. Tasteful early-2000s — handmade but well made.
 
 Plain HTML, CSS, and a teaspoon of JavaScript. No frameworks, no build step, no dependencies. Double-click `index.html` to open it locally, or drop the folder onto any static host.
 
