@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kindling — a small site, kept by hand</title>
+  <meta name="description" content="a personal homepage. writing, projects, links, and weather reports from inside my head.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ─────────────────────────  top bracket nav  ───────────────────────── -->
+  <nav class="bracket-nav" aria-label="primary">
+    <a href="#">[home]</a>
+    <a href="#about">[about]</a>
+    <a href="#writing">[writing]</a>
+    <a href="#projects">[projects]</a>
+    <a href="#links">[links]</a>
+    <a href="#guestbook">[guestbook]</a>
+    <a href="#contact">[contact]</a>
+  </nav>
+
+  <div class="page">
+
+    <!-- ─────────────────────────  banner  ───────────────────────── -->
+    <header class="banner" role="banner">
+      <div class="banner-stripes" aria-hidden="true"></div>
+      <div class="logo-plaque">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path fill="#efe9cf" stroke="#222" stroke-width="0.6"
+              d="M12 2c.9 3.4-1.6 4.2-1 7 .6 2.4 3 2.4 3 5 0 1.6-1 3-2.5 3.5 1-1.2 1-2.5.2-3.6-1-1.4-3-1.6-3-3.6 0-1.8 1.6-2.4 1.6-3.8 0-1.6-1-2.4-1-2.5C10 4 10.8 3 12 2z"/>
+            <path fill="#d9b35a" stroke="#222" stroke-width="0.5"
+              d="M8 14c0 4 2 7 4 7s4-3 4-7c0-1.6-.6-3-1.4-4 .1 2-1 3.4-2.6 3.4S9.3 12 9.4 10C8.6 11 8 12.4 8 14z"/>
+          </svg>
+        </span>
+        <h1 class="logo-word">kindling<span class="logo-tld">.net</span></h1>
+        <small class="logo-tag">where small things are kept warm</small>
+      </div>
+      <div class="banner-meta" aria-hidden="true">
+        <span class="banner-pill">est. <span data-year>2026</span></span>
+        <span class="banner-pill">hand-coded</span>
+        <span class="banner-pill">no analytics</span>
+      </div>
+    </header>
+
+    <!-- ─────────────────────────  login bar  ───────────────────────── -->
+    <div class="login-bar" role="presentation">
+      <label>Nick: <input type="text" size="10" tabindex="-1"></label>
+      <label>Pass: <input type="password" size="10" tabindex="-1"></label>
+      <button type="button" class="btn" tabindex="-1">Login</button>
+      <span class="login-sep">|</span>
+      <a href="#" tabindex="-1">Become A Regular</a>
+      <span class="login-sep">|</span>
+      <a href="#" tabindex="-1">Recover Password</a>
+      <small class="login-note">(the login does nothing. it's just here for the vibes.)</small>
+    </div>
+
+    <!-- ─────────────────────────  main 3-col grid  ───────────────────────── -->
+    <div class="grid">
+
+      <!-- ─────────  LEFT COLUMN  ───────── -->
+      <aside class="col col-left" aria-label="navigation and elsewhere">
+
+        <section class="panel">
+          <h2 class="panel-bar">Navigation</h2>
+          <ul class="link-list">
+            <li><a href="#">→ front porch</a></li>
+            <li><a href="#about">→ about me</a></li>
+            <li><a href="#writing">→ the writing desk</a></li>
+            <li><a href="#projects">→ things i made</a></li>
+            <li><a href="#links">→ stuff worth your time</a></li>
+            <li><a href="#guestbook">→ sign the guestbook</a></li>
+            <li><a href="#colophon">→ colophon</a></li>
+            <li><a href="#contact">→ send mail</a></li>
+            <li><a href="#rss">→ rss feed</a></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">Elsewhere</h2>
+          <ul class="link-list dotted">
+            <li><a href="#">github</a> <small>// code</small></li>
+            <li><a href="#">are.na</a> <small>// scraps</small></li>
+            <li><a href="#">mastodon</a> <small>// fedi</small></li>
+            <li><a href="#">last.fm</a> <small>// audio</small></li>
+            <li><a href="#">letterboxd</a> <small>// film</small></li>
+            <li><a href="#">pixelfed</a> <small>// photos</small></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">Webring</h2>
+          <div class="panel-body webring">
+            <p><strong>« the slow web »</strong></p>
+            <p>a ring of small, handmade sites updated when their keepers have something to say.</p>
+            <div class="ring-nav">
+              <a href="#">‹ prev</a>
+              <a href="#">random</a>
+              <a href="#">next ›</a>
+            </div>
+            <p class="webring-count"><span class="count-cell">0</span><span class="count-cell">0</span><span class="count-cell">4</span><span class="count-cell">7</span> sites in ring</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">Visitors</h2>
+          <div class="panel-body counter">
+            <p class="counter-label">you are visitor</p>
+            <p class="counter-digits" data-hit-counter>0000000</p>
+            <p class="counter-label">since aug ’26</p>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- ─────────  MAIN COLUMN  ───────── -->
+      <main class="col col-main">
+
+        <section class="panel welcome">
+          <h2 class="panel-bar lit">★ welcome to kindling — please wipe your shoes ★</h2>
+          <div class="panel-body">
+            <p class="lede">this is a small site i keep by hand. there are no algorithms here, no popups, no newsletter modal that ambushes you twelve seconds in.</p>
+            <p>i write things, i make things, i collect things, and every so often i tell the truth about how it’s going. if any of that sounds interesting, you’re in the right hallway. if not — the door is right where you came in, no hard feelings.</p>
+            <p class="byline">— k., <time datetime="2026-05-22">22 may 2026</time>, in the kitchen</p>
+          </div>
+        </section>
+
+        <section class="panel" id="writing">
+          <h2 class="panel-bar">The Writing Desk <span class="panel-bar-aside">5 most recent</span></h2>
+          <ul class="entry-list">
+            <li>
+              <a href="#" class="entry-title">on keeping a website like a garden, not a feed</a>
+              <div class="entry-meta">
+                <time>2026-05-18</time> · 8 min ·
+                <em>essays</em> ·
+                <a href="#" class="meta-link">[full story]</a>
+                <a href="#" class="meta-link">[3 comments]</a>
+              </div>
+              <p class="entry-blurb">the difference between a thing you tend and a thing you scroll. why my browser bookmarks have outlasted three social networks.</p>
+            </li>
+            <li>
+              <a href="#" class="entry-title">things i learned by reading the same book four times</a>
+              <div class="entry-meta">
+                <time>2026-05-09</time> · 6 min ·
+                <em>notes</em> ·
+                <a href="#" class="meta-link">[full story]</a>
+                <a href="#" class="meta-link">[0 comments]</a>
+              </div>
+              <p class="entry-blurb">a defence of slow reading, repetition, and marginalia, with apologies to my library copy of <em>gilead</em>.</p>
+            </li>
+            <li>
+              <a href="#" class="entry-title">a small theory of small kitchens</a>
+              <div class="entry-meta">
+                <time>2026-04-27</time> · 4 min ·
+                <em>cooking</em> ·
+                <a href="#" class="meta-link">[full story]</a>
+                <a href="#" class="meta-link">[7 comments]</a>
+              </div>
+              <p class="entry-blurb">why constraints make better dinners, plus a recipe for the lentils i lived on for most of march.</p>
+            </li>
+            <li>
+              <a href="#" class="entry-title">the year i tried to fix my attention</a>
+              <div class="entry-meta">
+                <time>2026-04-11</time> · 12 min ·
+                <em>essays</em> ·
+                <a href="#" class="meta-link">[full story]</a>
+                <a href="#" class="meta-link">[14 comments]</a>
+              </div>
+              <p class="entry-blurb">what worked, what didn’t, and what i quietly went back to doing in december.</p>
+            </li>
+            <li>
+              <a href="#" class="entry-title">notebook, march: birds, books, bridges</a>
+              <div class="entry-meta">
+                <time>2026-03-31</time> · 3 min ·
+                <em>notebook</em> ·
+                <a href="#" class="meta-link">[full story]</a>
+                <a href="#" class="meta-link">[1 comment]</a>
+              </div>
+              <p class="entry-blurb">a month in fragments. a heron on the canal. a quote from berger. a structure i don’t yet understand.</p>
+            </li>
+          </ul>
+          <p class="panel-foot"><a href="#">→ everything i’ve written (84 posts)</a> · <a href="#">→ subscribe by rss</a></p>
+        </section>
+
+        <section class="panel" id="projects">
+          <h2 class="panel-bar">Things I Made</h2>
+          <ul class="project-grid">
+            <li>
+              <span class="status status-shipped">SHIPPED</span>
+              <a href="#" class="entry-title">lichen</a>
+              <p>a slow rss reader that only checks feeds once a day, on purpose. for people who don’t want to know everything immediately.</p>
+            </li>
+            <li>
+              <span class="status status-brewing">BREWING</span>
+              <a href="#" class="entry-title">marginalia.css</a>
+              <p>a tiny css library for laying out books on the web with proper margins, drop caps, and footnotes that don’t embarrass themselves.</p>
+            </li>
+            <li>
+              <span class="status status-shipped">SHIPPED</span>
+              <a href="#" class="entry-title">postcard</a>
+              <p>send one short email to one person, once. no thread, no reply-all, no subject line. closed beta because honestly i’m not sure anyone wants this.</p>
+            </li>
+            <li>
+              <span class="status status-abandoned">ABANDONED</span>
+              <a href="#" class="entry-title">parallax</a>
+              <p>an ambitious browser-based collage tool. i learned an enormous amount and shipped exactly nothing. the source is still up.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel" id="now">
+          <h2 class="panel-bar">Now <span class="panel-bar-aside">updated <time>22 may</time></span></h2>
+          <dl class="now-list">
+            <dt>location</dt> <dd>a small flat near a big river</dd>
+            <dt>reading</dt> <dd><em>the rings of saturn</em> — sebald (third time)</dd>
+            <dt>listening</dt> <dd>arthur russell, <em>another thought</em></dd>
+            <dt>cooking</dt> <dd>a lot of leeks. it’s leek season.</dd>
+            <dt>working on</dt> <dd>marginalia.css and a long essay about handwriting<span class="cursor" aria-hidden="true"></span></dd>
+            <dt>avoiding</dt> <dd>the news, mostly. checking my phone in bed.</dd>
+          </dl>
+        </section>
+
+      </main>
+
+      <!-- ─────────  RIGHT COLUMN  ───────── -->
+      <aside class="col col-right" aria-label="search and shouts">
+
+        <section class="panel">
+          <h2 class="panel-bar">Search</h2>
+          <form class="panel-body search" onsubmit="event.preventDefault(); alert('search is on the to-do list. sorry.');">
+            <label for="q">Find:</label>
+            <input id="q" type="text" size="14">
+            <label for="sec">Section:</label>
+            <select id="sec">
+              <option>All</option>
+              <option>Writing</option>
+              <option>Projects</option>
+              <option>Links</option>
+              <option>Guestbook</option>
+            </select>
+            <button type="submit" class="btn">Find!</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">Featured</h2>
+          <div class="panel-body featured">
+            <p class="featured-title">quote of the week</p>
+            <blockquote>
+              “the trouble with the rat race is that even if you win, you’re still a rat.”
+            </blockquote>
+            <p class="featured-by">— lily tomlin</p>
+            <hr>
+            <p class="featured-title">album on rotation</p>
+            <p><strong>another thought</strong><br>arthur russell, 1994</p>
+            <p class="featured-by">posthumous, cellos, a voice from another room.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">
+            <span class="ticker" aria-hidden="true">
+              <span class="ticker-track">✦ welcome ✦ sign the guestbook ✦ rss is alive ✦ tell a friend ✦&nbsp;&nbsp;</span>
+            </span>
+            <span class="visually-hidden">Shoutbox</span>
+          </h2>
+          <ol class="shouts">
+            <li>
+              <strong>maren</strong> <small>08/15 13:37:53</small>
+              <p>love what you’ve done with the place. it’s like a real website.</p>
+            </li>
+            <li>
+              <strong>jules</strong> <small>08/15 13:18:45</small>
+              <p>thank you for not having a cookie banner. that’s the whole post.</p>
+            </li>
+            <li>
+              <strong>tomás</strong> <small>08/15 12:44:47</small>
+              <p>read the essay on attention. needed it. going outside now.</p>
+            </li>
+            <li>
+              <strong>row</strong> <small>08/15 12:42:07</small>
+              <p>when’s the next post? no pressure. ok a little pressure.</p>
+            </li>
+            <li>
+              <strong>p.</strong> <small>08/15 12:23:51</small>
+              <p>found this through the slow web ring. saying hi.</p>
+            </li>
+          </ol>
+          <p class="panel-foot"><a href="#guestbook">→ leave a shout</a></p>
+        </section>
+
+        <section class="panel">
+          <h2 class="panel-bar">Colophon</h2>
+          <div class="panel-body colophon">
+            <p>hand-coded in plain html, css, and a teaspoon of javascript. no frameworks were harmed.</p>
+            <p>typeset in <strong>verdana</strong>, with <em>courier new</em> for the small print. served as <code>text/html</code>, like nature intended.</p>
+            <p class="badges">
+              <span class="badge">html<br>4.01</span>
+              <span class="badge alt">css<br>handmade</span>
+              <span class="badge">no<br>cookies</span>
+            </p>
+          </div>
+        </section>
+
+      </aside>
+
+    </div>
+
+    <!-- ─────────────────────────  bottom nav  ───────────────────────── -->
+    <nav class="bracket-nav bracket-nav-bottom" aria-label="footer">
+      <a href="#">[home]</a>
+      <a href="#about">[about]</a>
+      <a href="#writing">[writing]</a>
+      <a href="#projects">[projects]</a>
+      <a href="#links">[links]</a>
+      <a href="#guestbook">[guestbook]</a>
+      <a href="#contact">[contact]</a>
+    </nav>
+
+    <!-- ─────────────────────────  footer  ───────────────────────── -->
+    <footer class="footer">
+      <p class="render-time">[page rendering and processing was a mere <span data-render-time>0.000000</span> seconds]</p>
+      <p class="copy">© <span data-year>2026</span>, kindling.net, kept by hand. all words mine unless quoted.</p>
+      <p class="copy">no portion may be used in training a machine that writes for you. you can write for yourself.</p>
+      <p class="best-viewed">
+        <span class="bv-badge">best viewed in 1024×768 · any browser made after the year you were born</span>
+      </p>
+      <p class="under-construction" aria-hidden="true">
+        <span class="construction-sign">⚠ this site is, like everything good, permanently under construction ⚠</span>
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# third-party reference screenshot used for the design brief only
+50de5af80ae782003cd3540f3410f349.jpg
+
+# os / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
