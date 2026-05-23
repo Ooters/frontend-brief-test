@@ -123,15 +123,15 @@ code, kbd, samp { font-family: "Courier New", monospace; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  transform: skewX(-2deg);
+  /* transform: skewX(-2deg); */
 }
-.logo-plaque > * { transform: skewX(2deg); }
+/* .logo-plaque > * { transform: skewX(2deg); } */
 
 .logo-mark {
   line-height: 0;
-  background: #fff;
-  border: 1px solid var(--sage-dark);
-  box-shadow: inset 0 0 0 2px var(--cream), 1px 1px 0 #00000022;
+  /* background: #fff; */
+  /* border: 1px solid var(--sage-dark);
+  box-shadow: inset 0 0 0 2px var(--cream), 1px 1px 0 #00000022; */
   padding: 2px;
 }
 .logo-mark img {
@@ -455,7 +455,7 @@ code, kbd, samp { font-family: "Courier New", monospace; }
 
 .cursor {
   display: inline-block;
-  width: 6px; height: 11px;
+  width: 4px; height: 11px;
   background: var(--ink);
   margin-left: 2px;
   vertical-align: -1px;
